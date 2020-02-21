@@ -1,3 +1,4 @@
+# Build Phase : Begin
 FROM  node:alpine AS builder
 
 WORKDIR /app
@@ -9,9 +10,10 @@ RUN npm install
 COPY . .
 
 RUN npm run build
+# Build Phase : End
 
-FROM nginx
+# Hosting/Run Phase : Begin
+FROM nginx AS webserver
 
 COPY --from=builder /app/build /usr/share/nginx/html
-
-
+# Hosting/Run Phase : End
