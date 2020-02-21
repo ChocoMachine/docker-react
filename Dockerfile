@@ -14,6 +14,6 @@ RUN npm run build
 
 # Hosting/Run Phase : Begin
 FROM nginx AS webserver
-
+EXPOSE 80
 COPY --from=builder /app/build /usr/share/nginx/html
 # Hosting/Run Phase : End
