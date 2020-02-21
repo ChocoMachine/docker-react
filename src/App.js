@@ -11,7 +11,7 @@ function App() {
           Edit <code>src/App.js</code> and save to reload.
         </p>
         <p>
-          By David Manning is cool. v2
+          By David Manning is cool. v3 for CI Demo xxx
         </p>
         <a
           className="App-link"
