@@ -11,7 +11,7 @@ function App() {
           Edit <code>src/App.js</code> and save to reload.
         </p>
         <p>
-          By David Manning v6666...777
+          By David Manning is cool, he's got hot reloading working and Docker mapped to local directory.
         </p>
         <a
           className="App-link"
