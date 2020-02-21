@@ -7,6 +7,10 @@ script:
   - docker run -e CI=true chocomachine/docker-react npm run test -- --coverage
 deploy:
   provider: elasticbeanstalk
+  access_key_id:
+    secure: $AWS_ACCESS_KEY
+  secret_access_key:
+    secure: $AWS_SECRET_KEY
   region: "us-east-2"
   app: "docker-react"
   env: "DockerReact-env"
@@ -14,7 +18,3 @@ deploy:
   bucket_path: "docker-react"
   on:
     branch: master
-    access_key_id:
-      secure: "$AWS_ACCESS_KEY"
-    secret_access_key:
-      secure: "$AWS_SECRET_KEY"
